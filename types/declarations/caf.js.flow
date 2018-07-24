@@ -1,0 +1,29 @@
+interface cast$loadRequestData {
+}
+
+interface cast$MessageType {
+  LOAD: string;
+}
+
+interface cast$Messages {
+  MessageType: cast$MessageType;
+}
+
+interface cast$PlayerManager {
+  setMessageInterceptor(messageType: string, filter: (loadRequestData: cast$loadRequestData) => cast$loadRequestData): void;
+}
+
+declare class cast$CastReceiverContext {
+  static getInstance(): cast$CastReceiverContext;
+  getPlayerManager(): cast$PlayerManager;
+  start(): void;
+}
+
+interface cast$Framework {
+  messages: cast$Messages;
+  CastReceiverContext: Class<cast$CastReceiverContext>;
+}
+
+var cast: {
+  framework: cast$Framework
+};

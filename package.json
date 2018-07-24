@@ -1,0 +1,22 @@
+{
+  "name": "sample-caf-receiver",
+  "version": "1.0.0",
+  "main": "src/player.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ygoto3/sample-caf-receiver.git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "test": "ava",
+    "type": "flow",
+    "build:libs": "browserify ./libs/libs.js -o ./src/libs.js"
+  },
+  "devDependencies": {
+    "ava": "1.0.0-beta.6",
+    "browserify": "^16.2.2",
+    "flow-bin": "^0.77.0",
+    "htmlparser2": "^3.9.2",
+    "incremental-dom": "^0.5.1"
+  }
+}

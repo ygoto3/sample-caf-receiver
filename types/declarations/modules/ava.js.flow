@@ -1,0 +1,9 @@
+interface ava$Execution {
+  is(a: any, b: any): void;
+  deepEqual(a: any, b: any): void;
+  snapshot(a: any): void;
+}
+
+declare module 'ava' {
+  declare export default (label: string, implementation: (t: ava$Execution) => void) => void;
+}

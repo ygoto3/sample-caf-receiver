@@ -1,0 +1,5 @@
+declare interface Model {
+  page: string;
+  initializingPage: boolean;
+  castMediaPlayerId: string;
+}
